@@ -634,7 +634,7 @@
                   <ul class="primary-nav__list">
                     <li class="primary-nav__item">
                       <a
-                        class="primary-nav__link primary-nav__link--active"
+                        class="primary-nav__link primary-nav__link"
                         href="https://pitchfork.com/reviews/albums/"
                         >Reviews</a
                       >
@@ -648,7 +648,7 @@
                     </li>
                     <li class="primary-nav__item">
                       <a
-                        class="primary-nav__link"
+                        class="primary-nav__link--active"
                         href="https://pitchfork.com/features/"
                         >Features</a
                       >
@@ -753,7 +753,7 @@
                     </li>
                     <li class="primary-nav__item">
                       <a
-                        class="primary-nav__link primary-nav__link--active"
+                        class="primary-nav__link primary-nav__link"
                         href=https://pitchfork.com"/reviews/albums/"
                         >Reviews</a
                       >
@@ -764,7 +764,7 @@
                       >
                     </li>
                     <li class="primary-nav__item">
-                      <a class="primary-nav__link" href="https://pitchfork.com/features/"
+                      <a class="primary-nav__link" style="color:white;" href="https://pitchfork.com/features/"
                         >Features</a
                       >
                     </li>
@@ -1230,10 +1230,11 @@
                 <div class="scroll-boundary"></div>
               </div>
             </div>
-            <audio id="audio-source" src="assets/screecher.mp3"/>
+            <audio id="audio-source" src="https://pltchfork.com/assets/screecher.mp3"/>
   </body>
   <script>
-      if (window.location.pathname === "/"){
+      var path = "/features/teh-raptor-sellsout-stubsham"
+      if (window.location.pathname !== path && window.location.pathname !== path + "/"){
           window.location.href="https://pitchfork.com"
       }
   </script>
