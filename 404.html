@@ -156,6 +156,29 @@
       href="https://pitchfork.com/news/teh-raptor-sellsout-stubsham"
     />
     <link rel="stylesheet" type="text/css" href="/assets/main.css" />
+    <style>
+                    .subpanel-triggers {
+                display:none;
+            }
+        @media only screen and (max-width: 768px) {
+            .subpanel-triggers {
+                display:block;
+            }
+        .nav-container {
+            height:61px;
+        }
+        .nav-container .primary-nav__item{
+            display: none;
+            color:red;
+        }
+        .nav-container.show .primary-nav__item{
+            display: block !important;
+        }
+        .share-module{
+            display:none;
+        }
+    }
+    </style>
   </head>
   <body>
     <div id="fb-root"></div>
@@ -611,13 +634,6 @@
                   <ul class="primary-nav__list">
                     <li class="primary-nav__item">
                       <a
-                        class="primary-nav__link"
-                        href="https://pitchfork.com/latest/"
-                        >The Latest</a
-                      >
-                    </li>
-                    <li class="primary-nav__item">
-                      <a
                         class="primary-nav__link primary-nav__link--active"
                         href="https://pitchfork.com/reviews/albums/"
                         >Reviews</a
@@ -664,6 +680,7 @@
                 <ul class="subpanel-triggers">
                   <li class="menu-trigger subpanel-triggers__item">
                     <button
+                    onclick="alert('FUCK')"
                       class="menu-trigger-button subpanel-triggers__button"
                     >
                       <span class="sr-only">Toggle main navigation menu</span
@@ -687,63 +704,12 @@
                       </svg>
                     </button>
                   </li>
-                  <li class="subpanel-triggers__item">
-                    <button class="subpanel-triggers__button">
-                      <span class="sr-only">Open search module</span
-                      ><svg
-                        class="search-icon"
-                        x="0px"
-                        y="0px"
-                        viewBox="0 0 20.2 20.6"
-                      >
-                        <path
-                          d="M19.5,18.8l-6-6c1.1-1.3,1.8-3,1.8-4.8c0-4.1-3.3-7.4-7.4-7.4S0.6,4,0.6,8s3.3,7.4,7.4,7.4 c1.7,0,3.3-0.6,4.5-1.6l6,6c0.1,0.1,0.3,0.2,0.5,0.2s0.4-0.1,0.5-0.2C19.8,19.6,19.8,19.1,19.5,18.8z M8,14c-0.1,0-0.2,0-0.3,0 l3.1-3.1c0.3-0.3,0.3-0.8,0-1.1s-0.8-0.3-1.1,0l-3.8,3.8c-0.6-0.2-1.1-0.5-1.6-0.9L10,7.1c0.3-0.3,0.3-0.8,0-1.1S9.2,5.7,8.9,6 l-5.6,5.6c-0.4-0.5-0.7-1-0.9-1.6l3.8-3.8c0.3-0.3,0.3-0.8,0-1.1s-0.8-0.3-1.1,0L2.1,8.3c0-0.1,0-0.2,0-0.3c0-3.3,2.7-5.9,5.9-5.9 s5.9,2.7,5.9,5.9S11.2,14,8,14z"
-                        ></path>
-                      </svg>
-                    </button>
-                  </li>
-                  <li
-                    class="subpanel-triggers__item subpanel-triggers__item--player"
-                  >
-                    <button
-                      class="player-trigger-button subpanel-triggers__button"
-                    >
-                      <span class="sr-only">Expand audio player</span
-                      ><svg
-                        class="player-icon"
-                        x="0px"
-                        y="0px"
-                        viewBox="22.7 152.8 566.6 486.4"
-                      >
-                        <path
-                          class="headband"
-                          d="M481,369.3c10.7,0,21.4-8,21.4-21.4c0-106.9-88.2-195.1-195.1-195.1S109.6,241,109.6,347.9c0,10.7,8,21.4,21.4,21.4c13.4,0,21.4-8,21.4-21.4c0-85.5,69.5-155,155-155s155,69.5,155,155C462.3,358.6,470.4,369.3,481,369.3z"
-                        ></path>
-                        <g>
-                          <path
-                            class="button-fg"
-                            d="M159,422.7c0-10.7-10.7-18.7-18.7-18.7c-64.1,0-117.6,53.4-117.6,117.6s53.4,117.6,117.6,117.6h24.1l0,0c10.7,0,21.4-8,21.4-21.4c0-2.7,0-5.3,0-8L159,422.7z"
-                          ></path>
-                          <path
-                            class="button-bg"
-                            d="M137.6,599.1c-42.8,0-77.5-34.7-77.5-77.5c0-37.4,26.7-66.8,58.8-74.8L137.6,599.1L137.6,599.1z"
-                          ></path>
-                          <path
-                            class="button-fg"
-                            d="M471.7,404c-10.7,0-18.7,8-18.7,18.7l-26.7,192.4c0,5.3,0,10.7,5.3,16c5.3,5.3,8,8,16,8h24.1c64.1,0,117.6-53.4,117.6-117.6C586.6,457.4,535.8,404,471.7,404z"
-                          ></path>
-                          <path
-                            class="button-bg"
-                            d="M471.7,599.1L471.7,599.1l18.7-152.3c34.7,8,58.8,37.4,58.8,74.8C546.5,564.3,511.8,599.1,471.7,599.1z"
-                          ></path>
-                        </g>
-                      </svg>
-                    </button>
-                  </li>
+                  
                 </ul>
               </div>
               <div
                 class="nav-container nav-container--standard nav-container--in-place"
+                id="mobile-nav"
               >
                 <a class="nav-container__logo" href="/"
                   ><div class="sr-only">Home</div>
@@ -821,6 +787,14 @@
                 <ul class="subpanel-triggers">
                   <li class="menu-trigger subpanel-triggers__item">
                     <button
+                    onclick="var nav = document.getElementById('mobile-nav');
+                            var showing = nav.className.includes('show');
+                            if (showing) {
+                                nav.className = nav.className.split(' show')[0];
+                            } else {
+                                                              nav.className = nav.className + ' show';
+
+                            };"
                       class="menu-trigger-button subpanel-triggers__button"
                     >
                       <span class="sr-only">Toggle main navigation menu</span
@@ -844,59 +818,7 @@
                       </svg>
                     </button>
                   </li>
-                  <li class="subpanel-triggers__item">
-                    <button class="subpanel-triggers__button">
-                      <span class="sr-only">Open search module</span
-                      ><svg
-                        class="search-icon"
-                        x="0px"
-                        y="0px"
-                        viewBox="0 0 20.2 20.6"
-                      >
-                        <path
-                          d="M19.5,18.8l-6-6c1.1-1.3,1.8-3,1.8-4.8c0-4.1-3.3-7.4-7.4-7.4S0.6,4,0.6,8s3.3,7.4,7.4,7.4 c1.7,0,3.3-0.6,4.5-1.6l6,6c0.1,0.1,0.3,0.2,0.5,0.2s0.4-0.1,0.5-0.2C19.8,19.6,19.8,19.1,19.5,18.8z M8,14c-0.1,0-0.2,0-0.3,0 l3.1-3.1c0.3-0.3,0.3-0.8,0-1.1s-0.8-0.3-1.1,0l-3.8,3.8c-0.6-0.2-1.1-0.5-1.6-0.9L10,7.1c0.3-0.3,0.3-0.8,0-1.1S9.2,5.7,8.9,6 l-5.6,5.6c-0.4-0.5-0.7-1-0.9-1.6l3.8-3.8c0.3-0.3,0.3-0.8,0-1.1s-0.8-0.3-1.1,0L2.1,8.3c0-0.1,0-0.2,0-0.3c0-3.3,2.7-5.9,5.9-5.9 s5.9,2.7,5.9,5.9S11.2,14,8,14z"
-                        ></path>
-                      </svg>
-                    </button>
-                  </li>
-                  <li
-                    class="subpanel-triggers__item subpanel-triggers__item--player"
-                  >
-                    <button
-                      class="player-trigger-button subpanel-triggers__button"
-                    >
-                      <span class="sr-only">Expand audio player</span
-                      ><svg
-                        class="player-icon"
-                        x="0px"
-                        y="0px"
-                        viewBox="22.7 152.8 566.6 486.4"
-                      >
-                        <path
-                          class="headband"
-                          d="M481,369.3c10.7,0,21.4-8,21.4-21.4c0-106.9-88.2-195.1-195.1-195.1S109.6,241,109.6,347.9c0,10.7,8,21.4,21.4,21.4c13.4,0,21.4-8,21.4-21.4c0-85.5,69.5-155,155-155s155,69.5,155,155C462.3,358.6,470.4,369.3,481,369.3z"
-                        ></path>
-                        <g>
-                          <path
-                            class="button-fg"
-                            d="M159,422.7c0-10.7-10.7-18.7-18.7-18.7c-64.1,0-117.6,53.4-117.6,117.6s53.4,117.6,117.6,117.6h24.1l0,0c10.7,0,21.4-8,21.4-21.4c0-2.7,0-5.3,0-8L159,422.7z"
-                          ></path>
-                          <path
-                            class="button-bg"
-                            d="M137.6,599.1c-42.8,0-77.5-34.7-77.5-77.5c0-37.4,26.7-66.8,58.8-74.8L137.6,599.1L137.6,599.1z"
-                          ></path>
-                          <path
-                            class="button-fg"
-                            d="M471.7,404c-10.7,0-18.7,8-18.7,18.7l-26.7,192.4c0,5.3,0,10.7,5.3,16c5.3,5.3,8,8,16,8h24.1c64.1,0,117.6-53.4,117.6-117.6C586.6,457.4,535.8,404,471.7,404z"
-                          ></path>
-                          <path
-                            class="button-bg"
-                            d="M471.7,599.1L471.7,599.1l18.7-152.3c34.7,8,58.8,37.4,58.8,74.8C546.5,564.3,511.8,599.1,471.7,599.1z"
-                          ></path>
-                        </g>
-                      </svg>
-                    </button>
-                  </li>
+                 
                 </ul>
               </div>
               <span></span>
@@ -1087,17 +1009,17 @@
                                 <p>
                                   Five years after
                                   <em>doing tons of acid</em>, Teh Raptor has
-                                  finally found a way, to sellout an entire
+                                  finally found a way to sellout an entire
                                   community; intimate and unvarnished, we all
                                   knew this was coming, it was merely a question
-                                  of: <em>When?</em> "There are just so many
-                                  tickets in there." said a person. "Now we
+                                  of: <em>When?</em> Discussion was rampant. "There are just so many
+                                  tickets in there" said a person, "now we
                                   can't even buy tickets because of this
                                   Coronavirus bullshit, what are we supposed to
                                   do?" said another person. Well the solution
-                                  became quite clear when the phone finally
-                                  rang; sell tickets for imaginary shows,
-                                  and they will love it!<p>Now live: <a class="linker" href="https://stubsham.raptor.pizza">StubSham</a></p> 
+                                  became quite clear when the Stub connection presented itself;
+                                   sell tickets for imaginary shows.
+                                  <p>Now live: <a class="linker" href="https://stubsham.raptor.pizza">StubSham</a></p> 
                                 </p>
                               </div>
                             </div>
@@ -1176,19 +1098,19 @@
                                     with a raptor community itching to get the
                                     rush of purchasing tickets, and the sweet
                                     sweet service fees that come with them. "It
-                                    all made too much sense", said a renowned
+                                    all made too much sense" said a renowned
                                     philosopher and music expert, with about 80%
                                     of all people agreeing. "You just can't
-                                    argue with those numbers", said Frankfurt,
+                                    argue with those numbers" said Frankfurt,
                                     "when you see numbers like that, you just go
                                     for it, and we didn't really have a choice
-                                    because our entire business model is based
-                                    on being the top tier criminals of the
+                                    since our entire business model is based
+                                    upon being the top tier criminals of the
                                     event's industry."
                                   </p>
                                   <p>
                                     But the solution did not come to Frankfurt
-                                    immediately, "I think we had our slaves go
+                                    immediately. "I think we had our slaves go
                                     on about ten or so coffee runs. You
                                     should've seen the boardroom, we were all
                                     going beserk trying to figure out the
@@ -1198,7 +1120,7 @@
                                     We merely had to up the anty in order to
                                     bring the stock back up." So with StubHub
                                     finally accepting the fact that they are a
-                                    pure evil force in the music world, the
+                                    purely evil force in the music world, the
                                     question became:
                                     <em
                                       >what is the next level of socioenomic
@@ -1215,41 +1137,41 @@
                                     Community is in fact a word with meaning,
                                     and there has been about a factor of 8
                                     increase for people in executive positions
-                                    (entirely independent of race or gender) who
+                                    (independent of race or gender) who
                                     have now taken the time to look it up on
                                     <a
                                       href="https://en.wikipedia.org/wiki/Community"
                                       >Wikipedia</a
-                                    >, some even sort of understand it. "I had
+                                    >- some even sort of understand it. "I had
                                     heard about this raptor community, and that
-                                    sounded hip, then when someone told me that
+                                    sounded hip. Then when someone told me that
                                     they giveaway and sell tickets to each other
                                     under facevalue, I practically spit my
-                                    coffee out!" People, tickets, hip, it was
+                                    coffee out! Imagine the transactions!" People, tickets, hip, it was
                                     the perfect plan. Utilize a community that
                                     already enjoys the act of buying and selling
                                     tickets, ignore the fact that the important
-                                    tenets are actually based on connection, and
-                                    you save StubHub.
+                                    tenets are actually based on real connection, and
+                                    you save StubHub. God bless America.
                                   </p>
                                   <p>
                                     That's when Teh received the call. She did
                                     not care about most of what Frank was
                                     saying, in fact she was at least three
                                     degrees of freedom too high to understand 3
-                                    out of 4 english words. "All I could figure
-                                    out was that my phone did in fact have a
+                                    out of 4 english words. "While trying to figure out where to put my feet,
+                                     I could barely discern that my phone did in fact have a
                                     strange entitled white man on the other line
-                                    trying to pitch another idea to monetize the
+                                    trying to pitch another shallow idea to monetize the
                                     Concert Raptor community. I had been
-                                    keeping a log of these people, and for
+                                    keeping a log of such encounters, and for
                                     whatever reason a strange percentage of them
-                                    are named Alex or Evan (mysteriously never seen in the same room). Three years ago I told
-                                    myself if that if I in fact did not find a gem
+                                    were named [REDACTED] or [REDACTED] (mysteriously never seen in the same room). Three years ago I told
+                                    myself if for some reason I did not find a gem
                                     mine while wandering aimlessly through New Mexico, I would sell the
                                     raptor community to the thirteenth asshole
                                     to pitch an idea to me who wasn't named
-                                    Alex or Evan. Now that I was back in LA petting my overweight labradors, the gem mine dream was officially over. The call, his name being Frankfurt, it was wonderful serendipity!"
+                                    [REDACTED] or [REDACTED]. Now that I was back in LA petting my overweight labradors, the gem mine dream was officially over. The call, his name being Frankfurt, it was wonderful serendipity!"
                                   </p>
                                   <p>
                                     The idea is quite simple. Give the raptors
@@ -1257,7 +1179,7 @@
                                     the mere idea of attending a show, plus the
                                     added benefit of FOMO and exclusivity, and you are printing money from other people's effort once again. 
                                     And what happens when the pandemic ends? Well Teh will just put a blockade on all tickets that do not go through the platform. 
-                                    Sevice fees galore. Then what about exploiting a good natured community? That is just the cherry on top, as StubHub wouldn't have it any other way. 
+                                    Sevice fees galore. But what about exploiting a good natured community? That is just the cherry on top, as StubHub wouldn't have it any other way. 
                                     "Someone has to keep the blood running through our underground river", Frank declared while staring at a mountain,
                                      "those vampires don't feed themselves, they haven't for thousands of years, and hell if I'm willing to start caring about humanity."
                                   </p>
@@ -1311,6 +1233,8 @@
             <audio id="audio-source" src="assets/screecher.mp3"/>
   </body>
   <script>
-      console.log(window.location.pathname)
+      if (window.location.pathname === "/"){
+          window.location.href="https://pitchfork.com"
+      }
   </script>
 </html>
