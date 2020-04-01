@@ -14,7 +14,7 @@
       data-react-helmet="true"
       property="description"
       name="description"
-      content="Five years after doing tons of acid, Teh Raptor has finally found a way, to sellout an entire community."
+      content="Teh Raptor has finally found a way, to sellout an entire community."
     />
     <meta
       data-react-helmet="true"
@@ -32,7 +32,7 @@
       data-react-helmet="true"
       property="og:description"
       name="og:description"
-      content="Five years after doing tons of acid, Teh Raptor has finally found a way, to sellout an entire community."
+      content="Teh Raptor has finally found a way, to sellout an entire community."
     />
     <meta
       data-react-helmet="true"
@@ -80,7 +80,7 @@
       data-react-helmet="true"
       property="twitter:description"
       name="twitter:description"
-      content="Five years after doing tons of acid, Teh Raptor has finally found a way, to sellout an entire community."
+      content="Teh Raptor has finally found a way, to sellout an entire community."
     />
     <meta
       data-react-helmet="true"
@@ -1008,7 +1008,7 @@
                               <div class="review-detail__abstract">
                                 <p>
                                   Five years after
-                                  <em>doing tons of acid</em>, Teh Raptor has
+                                  <em>doing tons of <span id="one">acid</span></em>, Teh Raptor has
                                   finally found a way to sellout an entire
                                   community; intimate and unvarnished, we all
                                   knew this was coming, it was merely a question
@@ -1158,11 +1158,11 @@
                                     That's when Teh received the call. She did
                                     not care about most of what Frank was
                                     saying, in fact she was at least three
-                                    degrees of freedom too high to understand 3
+                                    degrees of freedom too <span id="two">high</span> to understand 3
                                     out of 4 english words. "While trying to figure out where to put my feet,
-                                     I could barely discern that my phone did in fact have a
-                                    strange entitled white man on the other line
-                                    trying to pitch another shallow idea to monetize the
+                                     I could barely discern that I did in fact have another
+                                    strange entitled white man on the other line,
+                                    trying to pitch yet another shallow idea to monetize the
                                     Concert Raptor community. I had been
                                     keeping a log of such encounters, and for
                                     whatever reason a strange percentage of them
@@ -1234,8 +1234,15 @@
   </body>
   <script>
       var path = "/features/teh-raptor-sellsout-stubsham"
+      var pg_path = "features/tehraptor-sellsout-stubsham"
       if (window.location.pathname !== path && window.location.pathname !== path + "/"){
-          window.location.href="https://pitchfork.com"
-      }
+          if (window.location.pathname.includes(pg_path)){
+              document.getElementById("one").innerText = "hunts";
+              document.getElementById("two").innerText = "bored";
+          } else {
+              window.location.href="https://pitchfork.com";
+
+          }
+      } 
   </script>
 </html>
